@@ -32,6 +32,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link">Image Gallery</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link">Add News</a>
+                        </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
