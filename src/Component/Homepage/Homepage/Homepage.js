@@ -1,12 +1,10 @@
 import React from 'react';
-import AddNews from '../../AddNews/AddNews';
-import Navbar from '../../Reuse/Navbar/Navbar';
+import Newses from '../Newses/Newses';
 
 const Homepage = () => {
     return (
         <div>
-            <Navbar />
-            <AddNews />
+            <Newses />
         </div>
     );
 };

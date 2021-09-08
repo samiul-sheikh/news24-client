@@ -1,39 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">News24</a>
+                <a className="navbar-brand" href="/">News24</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link to="/" className="nav-link active" as={Link}>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Breaking News</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Category
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="#">Politics</a></li>
-                                <li><a className="dropdown-item" href="#">International</a></li>
-                                <li><a className="dropdown-item" href="#">Sports</a></li>
-                                <li><a className="dropdown-item" href="#">Entertainment</a></li>
-                                <li><hr className="dropdown-divider"></hr></li>
-                                <li><a className="dropdown-item" href="#">Today's Top News</a></li>
-                            </ul>
+                            <Link to="/international" className="nav-link me-5" as={Link}>International</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link">Image Gallery</a>
+                            <Link to="/sports" className="nav-link me-5" as={Link}>Sports</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link">Add News</a>
+                            <Link to="/entertainment" className="nav-link me-5" as={Link}>Entertainment</Link>
+                        </li>
+                        {/* {loggedInUser.email ?
+                            <li className="nav-item">
+                                <Link to="/login" className="nav-link me-5" as={Link}>{loggedInUser.email}</Link>
+                            </li> :
+                            <li className="nav-item">
+                                <Link to="/login" className="nav-link me-5" as={Link}>Login</Link>
+                            </li>
+                        } */}
+                        <li className="nav-item">
+                            <Link to="/dashboard" className="nav-link" as={Link}>Dashboard</Link>
                         </li>
                     </ul>
                     <form className="d-flex">

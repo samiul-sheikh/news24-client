@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Sidebar from '../Sidebar/Sidebar';
 
 const AddNews = () => {
     const { register, handleSubmit, errors } = useForm();
@@ -45,7 +46,8 @@ const AddNews = () => {
     }
     return (
         <section className="container-fluid row">
-            <div className="p-4 pr-5" style={{ position: 'absolute', right: 0, backgroundColor: '#F4FDFB' }}>
+            <Sidebar></Sidebar>
+            <div className="col-md-10 p-4 pr-5" style={{ position: 'absolute', right: 0, backgroundColor: '#F4FDFB' }}>
                 <h5 className="text-center">Add News Here</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-3">

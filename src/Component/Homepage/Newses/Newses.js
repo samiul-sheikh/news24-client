@@ -3,24 +3,23 @@ import NewsDetail from '../NewsDetail/NewsDetail';
 
 const Newses = () => {
 
-    const [services, setServices] = useState([]);
+    const [news, setNews] = useState([]);
 
-    // display all services from server
+    // display all news from server
     useEffect(() => {
-        fetch('http://localhost:8000/services')
+        fetch('http://localhost:8000/news')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setNews(data))
     }, [])
 
     return (
         <section className="container mt-5">
             <div className="text-center text-primary">
-                <h2>Our service</h2>
-                <h5>The great services we provide</h5>
+                <h2>Today's News</h2>
             </div>
             <div className="row mt-3">
                 {
-                    services.map(service => <NewsDetail service={service}></NewsDetail>)
+                    news.map(news => <NewsDetail news={news}></NewsDetail>)
                 }
             </div>
         </section>
