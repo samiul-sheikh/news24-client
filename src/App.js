@@ -12,6 +12,7 @@ import AddNews from './Component/Dashboard/AddNews/AddNews';
 import Newses from './Component/Homepage/Newses/Newses';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import NewsDetail from './Component/NewsDetail/NewsDetail';
+import AddAdmin from './Component/Dashboard/AddAdmin/AddAdmin';
 
 function App() {
     return (
@@ -27,6 +28,9 @@ function App() {
                     </Route>
                     <Route path="/addNews">
                         <AddNews />
+                    </Route>
+                    <Route path="/addAdmin">
+                        <AddAdmin />
                     </Route>
                     <Route path="/news">
                         <Newses />
