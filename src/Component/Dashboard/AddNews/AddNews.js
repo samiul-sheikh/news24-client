@@ -17,7 +17,7 @@ const AddNews = () => {
             imageURL: imageURL
         };
 
-        const url = `https://newsbd-24.herokuapp.com/addNews`;
+        const url = `http://localhost:8000/addNews`;
         // console.log(newsData)
 
         fetch(url, {

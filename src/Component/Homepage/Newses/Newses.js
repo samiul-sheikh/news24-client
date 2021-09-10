@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import NewsDetail from '../NewsDetail/NewsDetail';
+import News from '../News/News';
 
 const Newses = () => {
 
     const [news, setNews] = useState([]);
 
-    // display all news from server
+    // display all newses from server
     useEffect(() => {
-        fetch('https://newsbd-24.herokuapp.com/news')
+        fetch('http://localhost:8000/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])
@@ -19,7 +19,7 @@ const Newses = () => {
             </div>
             <div className="row mt-3">
                 {
-                    news.map(news => <NewsDetail news={news}></NewsDetail>)
+                    news.map(news => <News news={news}></News>)
                 }
             </div>
         </section>

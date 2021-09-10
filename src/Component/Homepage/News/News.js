@@ -1,13 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const NewsDetail = ({ news }) => {
+const News = ({ news }) => {
 
     const history = useHistory();
-    console.log(news);
+    // console.log(news);
 
-    const newsInfo = id => {
-        const url = `/news/${id}`;
+    const newsDetail = id => {
+        const url = `/info/${id}`;
         history.push(url);
     }
 
@@ -17,11 +17,11 @@ const NewsDetail = ({ news }) => {
                 <img src={news.imageURL} className="card-img-top cover" alt="..." style={{ height: '250px' }} />
                 <div className="card-body">
                     <h5 className="card-title">{news.title}</h5>
-                    <button onClick={() => newsInfo(news._id)} type="button" className="btn btn-primary">View More</button>
+                    <button onClick={() => newsDetail(news._id)} type="button" className="btn btn-primary">View More</button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default NewsDetail;
+export default News;

@@ -11,7 +11,7 @@ import Homepage from './Component/Homepage/Homepage/Homepage';
 import AddNews from './Component/Dashboard/AddNews/AddNews';
 import Newses from './Component/Homepage/Newses/Newses';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
-import Login from './Component/Login/Login/Login';
+import NewsDetail from './Component/NewsDetail/NewsDetail';
 
 function App() {
     return (
@@ -31,9 +31,9 @@ function App() {
                     <Route path="/news">
                         <Newses />
                     </Route>
-                    {/* <Route path="/login">
-                        <Login />
-                    </Route> */}
+                    <Route path="/info/:id">
+                        <NewsDetail />
+                    </Route>
                 </Switch>
                 <Footer />
             </Router>
