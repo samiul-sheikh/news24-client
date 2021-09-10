@@ -14,13 +14,12 @@ const NewsDetail = () => {
     }, [id])
 
     return (
-        <div className="text-center">
-            <h2>News Detail</h2>
-            <img src={newsInfo.imageURL} alt="" />
-            <h5>{newsInfo.title}</h5>
-            <p>{newsInfo.author}</p>
+        <div className="container">
+            <h1>{newsInfo.title}</h1>
+            <h6>By: {newsInfo.author}</h6>
+            <p>Category: {newsInfo.category}</p>
+            <img src={newsInfo.imageURL} className="img-fluid" alt="" />
             <p>{newsInfo.description}</p>
-            <p>{newsInfo.category}</p>
         </div>
     );
 };
