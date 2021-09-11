@@ -166,10 +166,10 @@ function Login() {
                 <br />
                 <input type="submit" value={newUser ? 'sign up' : 'sign in'} />
             </form>
-            <p style={{ color: 'red' }}>{user.error}</p>
+            {/* <p style={{ color: 'red' }}>{user.error}</p>
             {
                 user.success && <p style={{ color: 'green' }}>user {newUser ? 'created' : 'logged in'} successfully</p>
-            }
+            } */}
         </div>
     );
 }
