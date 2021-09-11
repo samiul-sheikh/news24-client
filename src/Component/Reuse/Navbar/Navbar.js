@@ -15,7 +15,7 @@ const Navbar = () => {
                             <Link to="/" className="nav-link active" as={Link}>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/international" className="nav-link me-5" as={Link}>International</Link>
+                            <Link to="/international" className="nav-link " as={Link}>International</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/sports" className="nav-link me-5" as={Link}>Sports</Link>
@@ -32,14 +32,17 @@ const Navbar = () => {
                             </li>
                         } */}
                         <li className="nav-item">
-                            <Link to="/dashboard" className="nav-link" as={Link}>Dashboard</Link>
+                            <Link to="/dashboard" className="nav-link me-5" as={Link}>Dashboard</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/login" className="nav-link me-5" as={Link}>Login</Link>
                         </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
-                    <button className="btn btn-outline-success ms-5" type="submit">Login</button>
+                    {/* <button className="btn btn-outline-success ms-5" type="submit">Login</button> */}
                 </div>
             </div>
         </nav>
