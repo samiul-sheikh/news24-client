@@ -14,7 +14,7 @@ import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import NewsDetail from './Component/NewsDetail/NewsDetail';
 import AddAdmin from './Component/Dashboard/AddAdmin/AddAdmin';
 import Login from './Component/Login/Login/Login';
-// import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
+import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
 
 export const UserContext = createContext();
@@ -26,15 +26,16 @@ function App() {
     return (
         <>
             <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+                {/* <h3>e-mail :{loggedInUser.email}</h3> */}
                 <Router>
                     <Navbar />
                     <Switch>
                         <Route exact path="/">
                             <Homepage />
                         </Route>
-                        <Route path="/dashboard">
+                        <PrivateRoute path="/dashboard">
                             <Dashboard />
-                        </Route>
+                        </PrivateRoute>
                         <Route path="/addNews">
                             <AddNews />
                         </Route>

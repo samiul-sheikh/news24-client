@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -23,20 +27,17 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link to="/entertainment" className="nav-link me-5" as={Link}>Entertainment</Link>
                         </li>
-                        {/* {loggedInUser.email ?
+                        <li className="nav-item">
+                            <Link to="/dashboard" className="nav-link me-5" as={Link}>Dashboard</Link>
+                        </li>
+                        {loggedInUser.email ?
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link me-5" as={Link}>{loggedInUser.email}</Link>
                             </li> :
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link me-5" as={Link}>Login</Link>
                             </li>
-                        } */}
-                        <li className="nav-item">
-                            <Link to="/dashboard" className="nav-link me-5" as={Link}>Dashboard</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/login" className="nav-link me-5" as={Link}>Login</Link>
-                        </li>
+                        }
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

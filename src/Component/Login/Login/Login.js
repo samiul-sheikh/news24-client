@@ -1,3 +1,4 @@
+import React from 'react';
 import firebase from "firebase/compat/app";
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -42,7 +43,9 @@ function Login() {
                     photo: photoURL
                 }
                 setUser(signedInUser);
-                console.log(displayName, email, photoURL);
+                setLoggedInUser(signedInUser);
+                history.replace(from);
+                // console.log(displayName, email, photoURL);
             })
             .catch(error => {
                 console.log(error);
@@ -144,7 +147,7 @@ function Login() {
         <div style={{ textAlign: 'center' }}>
             {
                 user.isSignedIn ? <button onClick={handleSignOut}>sign out</button> :
-                    <button onClick={handleSignIn}>sign In</button>
+                    <button onClick={handleSignIn}>sign in using Google</button>
             }
             {
                 user.isSignedIn && <div>
@@ -166,10 +169,10 @@ function Login() {
                 <br />
                 <input type="submit" value={newUser ? 'sign up' : 'sign in'} />
             </form>
-            {/* <p style={{ color: 'red' }}>{user.error}</p>
+            <p style={{ color: 'red' }}>{user.error}</p>
             {
                 user.success && <p style={{ color: 'green' }}>user {newUser ? 'created' : 'logged in'} successfully</p>
-            } */}
+            }
         </div>
     );
 }
