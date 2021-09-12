@@ -157,7 +157,7 @@ function Login() {
                 </div>
             }
 
-            <h3>Sign In/ Sign Up</h3>
+            <h6>Sign In/ Sign Up</h6>
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
             <label htmlFor="newUser">new user sign up</label>
             <form onSubmit={handleSubmit}>
