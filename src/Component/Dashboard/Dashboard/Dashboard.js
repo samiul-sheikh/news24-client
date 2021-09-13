@@ -15,10 +15,11 @@ const Dashboard = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-5 d-flex justify-content-center">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab?</p>
+                    <p>add news feature is only for admin</p>
                 </div>
                 <div className="col-md-5">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, exercitationem?</p>                </div>
+                    <p>add admin feature is only for admin</p>
+                </div>
             </div>
         </section>
     );

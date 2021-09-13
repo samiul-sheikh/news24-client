@@ -1,24 +1,25 @@
 import React from 'react';
 import img1 from '../../../images/img1.jpg';
 import img2 from '../../../images/img2.jpg';
+import img3 from '../../../images/img3.png';
 import img4 from '../../../images/img4.jpg';
-import TopNews from '../Topnews/TopNews';
+import TopNews from '../TopNews/TopNews';
 
 const newsData = [
     {
-        title: 'Hotel Management',
+        title: "Bangladesh's new data protection act, brittle shield or blunt swordt",
         image: img1
     },
     {
-        title: 'E-commerce Website',
+        title: "India players refused to play fifth Test against England, says Ganguly",
         image: img2
     },
     {
-        title: 'Restaurant System',
-        image: img4
+        title: "The Aurthohin reunion that melted hearts",
+        image: img3
     },
     {
-        title: 'Restaurant System',
+        title: "Sporshia to feature in Puja’s ‘Ashchey Ma Durga’",
         image: img4
     }
 ]

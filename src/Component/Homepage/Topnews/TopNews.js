@@ -6,7 +6,7 @@ const TopNews = ({ news }) => {
             <div className="card">
                 <img src={news.image} className="card-img-top" alt="..." />
                 <div className="card-title">
-                    <p>{news.title}</p>
+                    <h5>{news.title}</h5>
                 </div>
             </div>
         </div>
