@@ -15,7 +15,7 @@ const NewsDetail = () => {
     }, [id])
 
     return (
-        <div className="container">
+        <div className="container  mt-3">
             <div className="row d-flex">
                 <div className="col-md-8">
                     <h1>{newsInfo.title}</h1>
