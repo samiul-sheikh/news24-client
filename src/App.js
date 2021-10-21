@@ -6,7 +6,6 @@ import {
     Link
 } from "react-router-dom";
 import Navbar from './Component/Reuse/Navbar/Navbar';
-import Footer from './Component/Reuse/Footer/Footer';
 import Homepage from './Component/Homepage/Homepage/Homepage';
 import AddNews from './Component/Dashboard/AddNews/AddNews';
 import Newses from './Component/Homepage/Newses/Newses';
@@ -51,7 +50,6 @@ function App() {
                             <Login />
                         </Route>
                     </Switch>
-                    <Footer />
                 </Router>
             </UserContext.Provider>
         </>
