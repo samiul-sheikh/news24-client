@@ -2,15 +2,15 @@ import React from 'react';
 
 const TopNews = ({ news }) => {
     return (
-        <div className="col-md-3">
-            <div className="card">
-                <img src={news.image} className="card-img-top" alt="..." />
-                <div className="card-title">
-                    <h5>{news.title}</h5>
-                </div>
+        <div className="row d-flex align-items-center mb-2">
+            <div className="col-md-4">
+                <img src={news.urlToImage} className="img-fluid" alt="..." />
+            </div>
+            <div className="col-md-8">
+                <h6>{news.title}</h6>
             </div>
         </div>
     );
-};
+};          
 
 export default TopNews;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './News.css';
 import { useHistory } from 'react-router-dom';
 
 const News = ({ news }) => {
@@ -12,10 +13,12 @@ const News = ({ news }) => {
     }
 
     return (
-        <div className="col-md-3 text-center py-3">
-            <div className="card" style={{ width: '18rem' }}>
-                <img src={news.imageURL} className="card-img-top cover" alt="..." style={{ height: '250px' }} />
+        <div className="col-lg-4 col-md-6 mb-3">
+            <div className="card">
                 <div className="card-body">
+                    <div className="card-img">
+                        <img src={news.imageURL} className="card-img-top" alt="..." />
+                    </div>
                     <h5 className="card-title">{news.title}</h5>
                     <button onClick={() => newsDetail(news._id)} type="button" className="btn btn-primary">View More</button>
                 </div>

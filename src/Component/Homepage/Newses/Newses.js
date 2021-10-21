@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import News from '../News/News';
+import TopNewses from '../TopNewses/TopNewses';
 
 const Newses = () => {
 
@@ -13,16 +14,21 @@ const Newses = () => {
     }, [])
 
     return (
-        <section className="container mt-5">
-            <div className="text-center text-primary">
-                <h2>Today's News</h2>
+        <section className="mt-2">
+            <div className="row d-flex">
+                <div className="col-md-8">
+                    <h3 className="text-center text-primary mb-4">Today's News</h3>
+                    <div className="row">
+                        {
+                            news.map(news => <News news={news}></News>)
+                        }
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <TopNewses />
+                </div>
             </div>
-            <div className="row mt-3">
-                {
-                    news.map(news => <News news={news}></News>)
-                }
-            </div>
-        </section>
+        </section >
     );
 };
 
