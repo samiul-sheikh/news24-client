@@ -144,10 +144,10 @@ function Login() {
     }
 
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop: '200px' }}>
             {
                 user.isSignedIn ? <button onClick={handleSignOut}>sign out</button> :
-                    <button onClick={handleSignIn}>sign in using Google</button>
+                    <button onClick={handleSignIn}>Sign in using Google</button>
             }
             {
                 user.isSignedIn && <div>
@@ -166,7 +166,7 @@ function Login() {
                 <input type="text" name="email" onBlur={handleBlur} placeholder="enter your email address" required />
                 <br />
                 <input type="password" name="password" onBlur={handleBlur} placeholder="enter your password" required />
-                <br />
+                <br /> <br/>
                 <input type="submit" value={newUser ? 'sign up' : 'sign in'} />
             </form>
             <p style={{ color: 'red' }}>{user.error}</p>

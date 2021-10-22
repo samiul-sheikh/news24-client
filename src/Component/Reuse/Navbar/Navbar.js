@@ -21,12 +21,12 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link to="/international" className="nav-link me-5 " as={Link}>International</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/sports" className="nav-link me-5" as={Link}>Sports</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/entertainment" className="nav-link me-5" as={Link}>Entertainment</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link to="/dashboard" className="nav-link me-5" as={Link}>Dashboard</Link>
                         </li>
