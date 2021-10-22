@@ -16,23 +16,25 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link active me-5" as={Link}>Home</Link>
+                            <Link to="/" className="nav-link active" as={Link}>Home</Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                News Category
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link to="/sports" className="dropdown-item" as={Link}>Sports</Link>
+                                <Link to="/international" className="dropdown-item" as={Link}>International</Link>
+                                <li><hr className="dropdown-divider" /></li>
+                                <Link to="/topNews" className="dropdown-item" as={Link}>Breaking News</Link>
+                            </ul>
                         </li>
                         <li className="nav-item">
-                            <Link to="/international" className="nav-link me-5 " as={Link}>International</Link>
-                        </li>
-                        {/* <li className="nav-item">
-                            <Link to="/sports" className="nav-link me-5" as={Link}>Sports</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/entertainment" className="nav-link me-5" as={Link}>Entertainment</Link>
-                        </li> */}
-                        <li className="nav-item">
-                            <Link to="/dashboard" className="nav-link me-5" as={Link}>Dashboard</Link>
+                            <Link to="/dashboard" className="nav-link" as={Link}>Dashboard</Link>
                         </li>
                         {loggedInUser.email ?
                             <li className="nav-item">
-                                <Link to="/login" className="nav-link me-5" as={Link}>{loggedInUser.email}</Link>
+                                <Link to="/login" className="nav-link me-5" as={Link}>{loggedInUser.name}</Link>
                             </li> :
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link me-5" as={Link}>Login</Link>
