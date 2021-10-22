@@ -16,6 +16,7 @@ import Login from './Component/Login/Login/Login';
 import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
 import International from './Component/International/International';
+import AddTopNews from './Component/Dashboard/AddTopNews/AddTopNews';
 
 export const UserContext = createContext();
 
@@ -37,6 +38,9 @@ function App() {
                         </PrivateRoute>
                         <Route path="/addNews">
                             <AddNews />
+                        </Route>
+                        <Route path="/addTopNews">
+                            <AddTopNews />
                         </Route>
                         <Route path="/addAdmin">
                             <AddAdmin />

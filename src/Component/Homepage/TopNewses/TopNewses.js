@@ -4,11 +4,14 @@ import TopNews from '../TopNews/TopNews';
 const TopNewses = () => {
     const [articles, setArticles] = useState([]);
 
+
+    const [topNews, setTopNews] = useState([]);
+
+    // display top newses from server
     useEffect(() => {
-        const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=12780e2f84114c368bbdfdbd5b41113e';
-        fetch(url)
+        fetch('https://secret-temple-33863.herokuapp.com/topNews')
             .then(res => res.json())
-            .then(data =>setArticles(data.articles))
+            .then(data => setTopNews(data))
     }, [])
     return (
         <div className="container">
@@ -17,7 +20,7 @@ const TopNewses = () => {
             </div>
             <div className="row">
                 {
-                    articles.map(news => <TopNews news={news}></TopNews>)
+                    topNews.map(topNews => <TopNews topNews={topNews}></TopNews>)
                 }
             </div>
         </div>
