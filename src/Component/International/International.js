@@ -9,8 +9,8 @@ const International = () => {
     // }, [])
 
     return (
-        <div>
-            <h3>H</h3>
+        <div className="container text-center mt-5">
+            <h3>work going on... this feature is release as soon as possible...</h3>
         </div>
     );
 };
