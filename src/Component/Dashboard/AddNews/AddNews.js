@@ -17,7 +17,7 @@ const AddNews = () => {
             imageURL: imageURL
         };
 
-        const url = `http://localhost:8000/addNews`;
+        const url = `https://secret-temple-33863.herokuapp.com/addNews`;
         // console.log(newsData)
 
         fetch(url, {

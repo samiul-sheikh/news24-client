@@ -12,7 +12,7 @@ const NewsDetail = () => {
     const [newsInfo, setNewsInfo] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:8000/info/' + id)
+        fetch('https://secret-temple-33863.herokuapp.com/info/' + id)
             .then(res => res.json())
             .then(data => setNewsInfo(data))
     }, [id])

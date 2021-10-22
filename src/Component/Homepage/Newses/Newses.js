@@ -8,7 +8,7 @@ const Newses = () => {
 
     // display all newses from server
     useEffect(() => {
-        fetch('http://localhost:8000/news')
+        fetch('https://secret-temple-33863.herokuapp.com/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])

@@ -13,7 +13,7 @@ const AddAdmin = () => {
             email: data.email
         };
 
-        const url = `http://localhost:8000/addAdmin`;
+        const url = `https://secret-temple-33863.herokuapp.com/addAdmin`;
 
         fetch(url, {
             method: 'POST',
