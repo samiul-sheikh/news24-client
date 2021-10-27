@@ -20,7 +20,7 @@ const Newses = () => {
                     <h3 className="text-center text-primary mb-4">Today's News</h3>
                     <div className="row">
                         {
-                            news.map(news => <News news={news}></News>)
+                            news.map(news => <News news={news} key={news.title}></News>)
                         }
                     </div>
                 </div>

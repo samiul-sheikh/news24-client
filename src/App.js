@@ -17,6 +17,8 @@ import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
 import International from './Component/International/International';
 import AddTopNews from './Component/Dashboard/AddTopNews/AddTopNews';
+import Sports from './Component/Sports/Sports';
+import Country from './Component/Country/Country';
 
 export const UserContext = createContext();
 
@@ -53,6 +55,12 @@ function App() {
                         </PrivateRoute>
                         <Route path="/international">
                             <International />
+                        </Route>
+                        <Route path="/sports">
+                            <Sports />
+                        </Route>
+                        <Route path="/country">
+                            <Country />
                         </Route>
                         <Route path="/login">
                             <Login />

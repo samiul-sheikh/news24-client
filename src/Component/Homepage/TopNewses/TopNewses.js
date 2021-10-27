@@ -20,7 +20,7 @@ const TopNewses = () => {
             </div>
             <div className="row">
                 {
-                    topNews.map(topNews => <TopNews topNews={topNews}></TopNews>)
+                    topNews.map(topNews => <TopNews topNews={topNews} key={topNews.title}></TopNews>)
                 }
             </div>
         </div>
