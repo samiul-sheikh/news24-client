@@ -6,6 +6,7 @@ import Newses from '../Newses/Newses';
 const Homepage = () => {
     return (
         <div>
+            {/* <Header /> */}
             <Newses />
             <Footer />
         </div>

@@ -20,6 +20,11 @@ const TopNewses = () => {
             </div>
             <div className="row">
                 {
+                    topNews.length === 0 && <div class="spinner-border text-primary mx-auto my-auto" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                }
+                {
                     topNews.map(topNews => <TopNews topNews={topNews} key={topNews.title}></TopNews>)
                 }
             </div>
