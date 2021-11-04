@@ -25,6 +25,7 @@ const Navbar = () => {
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link to="/sports" className="dropdown-item" as={Link}>Sports</Link>
                                 <Link to="/country" className="dropdown-item" as={Link}>Country</Link>
+                                <Link to="/business" className="dropdown-item" as={Link}>Business</Link>
                                 <Link to="/international" className="dropdown-item" as={Link}>International</Link>
                             </ul>
                         </li>

@@ -10,7 +10,7 @@ const Sports = () => {
         fetch('https://secret-temple-33863.herokuapp.com/news')
             .then(res => res.json())
             .then(data => {
-                const sports = data.filter(cat => cat.category == "sports"
+                const sports = data.filter(cat => cat.category === "Sports"
                 )
                 setAllNews(sports)
             })

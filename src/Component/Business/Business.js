@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import News from '../Homepage/News/News';
 import TopNewses from '../Homepage/TopNewses/TopNewses';
 
-const Country = () => {
+const Business = () => {
 
     const [allNews, setAllNews] = useState([]);
 
@@ -10,9 +10,9 @@ const Country = () => {
         fetch('https://secret-temple-33863.herokuapp.com/news')
             .then(res => res.json())
             .then(data => {
-                const country = data.filter(cat => cat.category === "Country"
+                const business = data.filter(cat => cat.category === "Business"
                 )
-                setAllNews(country)
+                setAllNews(business)
             })
     }, [])
 
@@ -20,7 +20,7 @@ const Country = () => {
         <section className="mt-2">
             <div className="row d-flex">
                 <div className="col-md-8">
-                    <h3 className="text-center text-primary mb-4">Country News</h3>
+                    <h3 className="text-center text-primary mb-4">Business News</h3>
                     <div className="row">
                         {
                             allNews.map(news => <News news={news} key={news.title}></News>)
@@ -35,4 +35,4 @@ const Country = () => {
     );
 };
 
-export default Country;
+export default Business;

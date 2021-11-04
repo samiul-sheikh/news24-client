@@ -67,6 +67,11 @@ const AddTopNews = () => {
                     </div>
                     <div className="form-group mb-3">
                         <label for="exampleInputCategory" class="form-label">News Category</label>
+                        <input type="date" ref={register({ required: true })} name="category" placeholder="Enter Category" className="form-control" />
+                        {errors.category && <span className="text-danger">this field is required</span>}
+                    </div>
+                    <div className="form-group mb-3">
+                        <label for="exampleInputCategory" class="form-label">News Category</label>
                         <input type="text" ref={register({ required: true })} name="category" placeholder="Enter Category" className="form-control" />
                         {errors.category && <span className="text-danger">this field is required</span>}
                     </div>

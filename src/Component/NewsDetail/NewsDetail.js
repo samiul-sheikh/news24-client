@@ -24,7 +24,8 @@ const NewsDetail = () => {
                     <h1>{newsInfo.title}</h1>
                     <div className="d-flex">
                         <h6>By: {newsInfo.author}</h6>
-                        <h6 className="mx-2">21/10/2021</h6>
+                        <h6 className="mx-2">{newsInfo.date}</h6>
+                        <h6 className="mx-1">{newsInfo.time}</h6>
                         <h6>Category: {newsInfo.category}</h6>
                     </div>
                     <div className="d-flex mb-2">

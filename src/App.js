@@ -1,10 +1,5 @@
 import './App.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { BrowserRouter as Router,Switch, Route} from "react-router-dom";
 import Navbar from './Component/Reuse/Navbar/Navbar';
 import Homepage from './Component/Homepage/Homepage/Homepage';
 import AddNews from './Component/Dashboard/AddNews/AddNews';
@@ -19,6 +14,7 @@ import International from './Component/International/International';
 import AddTopNews from './Component/Dashboard/AddTopNews/AddTopNews';
 import Sports from './Component/Sports/Sports';
 import Country from './Component/Country/Country';
+import Business from './Component/Business/Business';
 
 export const UserContext = createContext();
 
@@ -61,6 +57,9 @@ function App() {
                         </Route>
                         <Route path="/country">
                             <Country />
+                        </Route>
+                        <Route path="/business">
+                            <Business />
                         </Route>
                         <Route path="/login">
                             <Login />

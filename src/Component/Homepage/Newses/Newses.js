@@ -20,7 +20,7 @@ const Newses = () => {
                     <h3 className="text-center text-primary mb-4">Today's News</h3>
                     <div className="row">
                         {
-                            news.length === 0 && <div class="spinner-border text-primary mx-auto my-auto" role="status">
+                            news.length === 0 && <div className="spinner-border text-primary mx-auto my-auto" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div>
                         }

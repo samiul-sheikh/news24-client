@@ -10,7 +10,7 @@ const International = () => {
         fetch('https://secret-temple-33863.herokuapp.com/news')
             .then(res => res.json())
             .then(data => {
-                const international = data.filter(cat => cat.category == "international"
+                const international = data.filter(cat => cat.category === "International"
                 )
                 setAllNews(international)
             })

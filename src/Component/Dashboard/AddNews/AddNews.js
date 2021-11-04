@@ -14,6 +14,8 @@ const AddNews = () => {
             author: data.author,
             description: data.description,
             category: data.category,
+            date: data.date,
+            time: data.time,
             imageURL: imageURL
         };
 
@@ -65,15 +67,36 @@ const AddNews = () => {
                         <input type="text" ref={register({ required: true })} name="description" placeholder="Enter Description" className="form-control" />
                         {errors.description && <span className="text-danger">this field is required</span>}
                     </div>
-                    <div className="form-group mb-3">
+                    {/* <div className="form-group mb-3">
                         <label for="exampleInputCategory" class="form-label">News Category</label>
                         <input type="text" ref={register({ required: true })} name="category" placeholder="Enter Category" className="form-control" />
                         {errors.category && <span className="text-danger">this field is required</span>}
+                    </div> */}
+                    <div className="form-group mb-3">
+                        <label for="exampleInputDescription" class="form-label">News Category</label>
+                        <select className="form-control" name="category" ref={register({ required: true })} >
+                            <option disabled={true} value="Not set">Select a Category</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Country">Country</option>
+                            <option value="International">International</option>
+                            <option value="Business">Business</option>
+                        </select>
+                        {errors.category && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group mb-3">
                         <label for="exampleInputImage" class="form-label">News Image</label>
                         <input onChange={handleImageUpload} type="file" ref={register({ required: true })} name="image" placeholder="Upload an Image" className="form-control" />
                         {errors.image && <span className="text-danger">new field is required</span>}
+                    </div>
+                    <div className="form-group mb-3">
+                        <label for="exampleInputDate" class="form-label">Pick a Date</label>
+                        <input type="date" ref={register({ required: true })} name="date" placeholder="Enter Date" className="form-control" />
+                        {errors.date && <span className="text-danger">this field is required</span>}
+                    </div>
+                    <div className="form-group mb-3">
+                        <label for="exampleInputTime" class="form-label">Pick a Time</label>
+                        <input type="time" ref={register({ required: true })} name="time" placeholder="Enter Time" className="form-control" />
+                        {errors.time && <span className="text-danger">this field is required</span>}
                     </div>
                     <div className="form-group d-grid mx-auto">
                         <button type="submit" className="btn btn-primary">Submit</button>
