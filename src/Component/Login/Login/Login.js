@@ -6,6 +6,8 @@ import firebaseConfig from '../../../config/firebase.config';
 import { useContext, useState } from 'react';
 import { useHistory, useLocation } from "react-router";
 import { UserContext } from "../../../App";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 function Login() {
 
@@ -147,7 +149,7 @@ function Login() {
         <div style={{ textAlign: 'center', marginTop: '200px' }}>
             {
                 user.isSignedIn ? <button onClick={handleSignOut}>sign out</button> :
-                    <button onClick={handleSignIn}>Sign in using Google</button>
+                    <button type="button" className="btn btn-outline-info" onClick={handleSignIn}><FontAwesomeIcon icon={faGoogle} /> Sign in using Google</button>
             }
             {
                 user.isSignedIn && <div>
@@ -165,8 +167,8 @@ function Login() {
                 <br />
                 <input type="text" name="email" onBlur={handleBlur} placeholder="enter your email address" required />
                 <br />
-                <input type="password" name="password" onBlur={handleBlur} placeholder="enter your password" required />
-                <br /> <br/>
+                <input type="password" name="password" onBlur={handleBlur} placeholder="enter password : abcd23" required />
+                <br /> <br />
                 <input type="submit" value={newUser ? 'sign up' : 'sign in'} />
             </form>
             <p style={{ color: 'red' }}>{user.error}</p>

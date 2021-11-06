@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faGripHorizontal, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faSignOutAlt, faGripHorizontal, faUserPlus, faPlusSquare, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
@@ -31,12 +31,12 @@ const Sidebar = () => {
                 {isAdmin && <div>
                     <li>
                         <Link to="/addNews" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faUserPlus} /> <span>Add News</span>
+                            <FontAwesomeIcon icon={faPlusSquare} /> <span>Add News</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/addTopNews" className="text-white text-decoration-none">
-                            <FontAwesomeIcon icon={faUserPlus} /> <span>Add Top News</span>
+                            <FontAwesomeIcon icon={faPlusCircle} /> <span>Add Top News</span>
                         </Link>
                     </li>
                     <li>
